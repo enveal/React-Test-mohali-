@@ -2,7 +2,6 @@ export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 
 const addProductToCart = (product, state) => {
-    alert("Hey")
     const updatedCart = [...state.cart];
     const updatedItemIndex = updatedCart.findIndex(
       item => item.id === product.id

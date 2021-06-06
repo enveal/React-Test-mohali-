@@ -9,7 +9,6 @@ const GlobalState = props => {
     const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });
   
     const addProductToCart = product => {
-      alert("jsss")
       setTimeout(() => {
         // setCart(updatedCart);
         dispatch({ type: ADD_PRODUCT, product: product });
