@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { Table, Button, Header, Icon } from 'semantic-ui-react'
-import {cartData} from '../Utils/DummyData'
+import { NavLink } from "react-router-dom";
 
 import ShopContext from "../Context/shop-Context";
 
@@ -16,7 +16,7 @@ const Cart = () => {
    <div>
     <div>
     <Header as='h2' style= {{color:"#18206c", display: "inline", fontWeight :"bolder"}}>Cart</Header>
-    <Icon style= {{float: "right", fontSize: "x-large"}} name='cart' />
+    <NavLink to="/"><Icon style= {{float: "right", fontSize: "x-large"}} name='close' />  </NavLink>
     </div>    
   <Table inverted celled>
     <Table.Header>
@@ -37,7 +37,7 @@ const Cart = () => {
         <Table.Cell>{d.Date}</Table.Cell>
         <Table.Cell>{d.Time}</Table.Cell>
         <Table.Cell>{`${d.Availabliity} seats available`}</Table.Cell>
-        <Table.Cell><Button style={{minWidth:"35%"}} color= 'orange' onClick={()=>{console.log(d);context.removeProductFromCart(d)}}> Cancel </Button></Table.Cell>
+        <Table.Cell><Button style={{minWidth:"35%"}} color= 'orange' onClick={()=>{console.log(d);context.removeProductFromCart(d.id)}}> Cancel </Button></Table.Cell>
       </Table.Row>
         
         )})}  

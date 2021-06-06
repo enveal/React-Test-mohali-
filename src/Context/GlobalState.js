@@ -1,14 +1,16 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useReducer, useContext } from "react";
 import shopContext from "./shop-Context";
 import {data} from "../Utils/DummyData"
 import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from "./Reducers";
 
 const GlobalState = props => {
+  const context = useContext(shopContext);
     const products = data;
     // const [cart, setCart] = useState([]);
     const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });
   
     const addProductToCart = product => {
+      console.log(context)  
       setTimeout(() => {
         // setCart(updatedCart);
         dispatch({ type: ADD_PRODUCT, product: product });

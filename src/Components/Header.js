@@ -8,7 +8,8 @@ const HeaderExamplePage = () => (
   <div>
     <div>
     <Header as='h2' style= {{color:"#f86801", display: "inline"}}>Claim your Free Trial Class</Header>
-    <NavLink to="/cart"><Icon style= {{float: "right", fontSize: "x-large"}} name='cart' /> </NavLink>
+    <NavLink to="/cart"><Icon style= {{float: "right", fontSize: "x-large"}} name='cart' /> <span> 4 </span></NavLink>
+   
     </div>
     <div></div>
     <div>

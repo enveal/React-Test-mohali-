@@ -26,14 +26,13 @@ const TableExampleSingleLine = () => {
         <Table.Cell>{d.Time}</Table.Cell>
         <Table.Cell>{`${d.Availabliity} seats available`}</Table.Cell>
         <Table.Cell>
-            <Button style={{minWidth:"35%"}} color= {d.Availabliity >0 ? 'orange' : 'red'} onClick={() => {context.addProductToCart(d);console.log(d)}}>
+            <Button style={{minWidth:"35%"}} color= {d.Availabliity >0 ? 'orange' : 'red'} onClick={() => {d.Availabliity>0 ? context.addProductToCart(d) : alert("You can't enroll this class")}}>
             {d.Availabliity >0 ? "Book Now" : "Full"} 
            </Button>
       </Table.Cell>
       </Table.Row>
       )
       })}  
-
     </Table.Body>
     </Table>
   )}

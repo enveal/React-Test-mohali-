@@ -3,6 +3,10 @@ export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 
 const addProductToCart = (product, state) => {
     const updatedCart = [...state.cart];
+    if(updatedCart.length==3){
+    alert("No More Class")
+    }
+    else{
     const updatedItemIndex = updatedCart.findIndex(
       item => item.id === product.id
     );
@@ -15,7 +19,7 @@ const addProductToCart = (product, state) => {
       };
       updatedItem.quantity++;
       updatedCart[updatedItemIndex] = updatedItem;
-    }
+    }}
     return { ...state, cart: updatedCart };
   };
 
