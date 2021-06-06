@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header, Icon } from 'semantic-ui-react'
+import { NavLink } from "react-router-dom";
 
 let seats=Math.floor(Math.random() * 11) + 5
 
@@ -7,7 +8,7 @@ const HeaderExamplePage = () => (
   <div>
     <div>
     <Header as='h2' style= {{color:"#f86801", display: "inline"}}>Claim your Free Trial Class</Header>
-    <Icon style= {{float: "right", fontSize: "x-large"}} name='cart' />
+    <NavLink to="/cart"><Icon style= {{float: "right", fontSize: "x-large"}} name='cart' /> </NavLink>
     </div>
     <div></div>
     <div>
